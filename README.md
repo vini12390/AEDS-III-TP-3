@@ -13,65 +13,49 @@ Persistência de dados: Salva as alterações realizadas nos registros no arquiv
 Tecnologias Utilizadas
 Linguagem de programação: Java
 
-Classes criadas no TP2: 
+Classes criadas no TP3: 
 
-Classe ArquivoCategoria
+Classe ArquivoRotulo
 
-ela constroi o arquivo de categorias, e tem seu CRUD de categorias implementado.
+ela constroi o arquivo de rotulos, e tem seu CRUD de rotulos implementado, juntamente com os métodos para manipular os rotulos.
 
-Classe ArquivoTarefa
+Classe ElementoLista
 
-ela constroi o arquivo de tarefas, e tem seu CRUD de tarefas implementado.
+estrutura lista invertida implementada.
 
-Classe ArvoreBMais
+Classe Rotulo
 
-estrutura árvore b+ implementada.
+entidade criada com seus atributos e métodos de serialização e deserialização, toString e print.
 
-Classe Categoria
+Classe TarefaRotulo
 
-objeto do tipo categoria implementado para ser usado, com seus sets/gets/métodos de serialização em um array de bytes.
+Classe que monta o par TarefaRotulo, que permite a busca de tarefas por rótulo.
 
-Classe ControleCategorias
+Classe RotuloTarefa
 
-Classe que possui métodos que interagem com as categorias(mostraCategorias) conforme as requisições do menu provenientes do usuário.
+Classe que monta o par RotuloTarefa, que permite a busca de tarefas por rótulo.
 
-Classe ControleTarefas
+Classe MenuRotulo
 
-Classe que possui métodos que interagem com as tarefas(buscarTarefas e mostrarTarefas) conforme as requisições do menu provenientes do usuário.
+Classe que constroi a interface de rotulos acessada no menu do programa.
 
-Classe MenuCategoria
+Classe ParNomeIDRotulo
 
-Classe que constroi o menu das categorias, que possui o método incluirCategoria implantado.
+Classe que constroi o Relacionamento entre nome, ID e rotulos
 
-Classe MenuTarefas
+Classe ParNomeIDTarefa
 
-Classe que constroi o menu das tarefas, que possui o método incluirTarefa implantado.
+Classe que constroi o Relacionamento entre nome, ID e tarefas
 
-Classe ParCategoriaTarefa
 
-Clases que implementa o par Categoria-Tarefa, um relacionamento.
-
-Classe ParNomeID
-
-Classe que implementa o índice indireto ParNomeID, que possui método clone, compareTo, toString, size e métodos de serialização em um array de bytes.
-
-além disso, são implementados também as interfaces novas:
-
-RegistroArvoreBMais
-
-interface que possui os métodos de serialização em array de bytes, compareTo, clone, e size, que são utilizados nos registros com a árvore b+.
-
-As operações mais difíceis foram para criar o menu, foram as que exigiram mais "trabalho", porque elas exploram a ideia de relacionamento. Também as que manipulam as categorias e as tarefas, pelo mesmo motivo.
+As operações mais "difíceis" foram as que envolvem a lista invertida, pois é a novidade desse TP. Para implementar o relacionamento utilizando árvore b+, não tive tanta dificuldade, pois a estrutura já foi introduzida no TP 2. 
 
 Para concluir, vocês devem, necessariamente, responder ao seguinte checklist (copie as perguntas abaixo para o seu relatório e responda sim/não em frente a elas):
 
-O CRUD (com índice direto) de categorias foi implementado? Sim
-Há um índice indireto de nomes para as categorias? Não
-O atributo de ID de categoria, como chave estrangeira, foi criado na classe Tarefa? Sim
-Há uma árvore B+ que registre o relacionamento 1:N entre tarefas e categorias? Sim
-É possível listar as tarefas de uma categoria? Sim
-A remoção de categorias checa se há alguma tarefa vinculada a ela? Sim
-A inclusão da categoria em uma tarefa se limita às categorias existentes? Sim
-O trabalho está funcionando corretamente? Sim
+O índice invertido com os termos das tarefas foi criado usando a classe ListaInvertida? Sim
+O CRUD de rótulos foi implementado? Sim
+No arquivo de tarefas, os rótulos são incluídos, alterados e excluídos em uma árvore B+? Sim
+É possível buscar tarefas por palavras usando o índice invertido? Sim
+É possível buscar tarefas por rótulos usando uma árvore B+? Sim
 O trabalho está completo? Sim
-O trabalho é original e não a cópia de um trabalho de outro grupo? Sim
+O trabalho é original e não a cópia de um trabalho de um colega? Sim
