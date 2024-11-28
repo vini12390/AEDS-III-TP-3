@@ -1,61 +1,96 @@
-Integrantes: Vinícius Figueiredo e Arthur Crossy
-Descrição Geral
-Esta aplicação tem como objetivo registrar dados em um arquivo externo, armazenando informações como nome, data de criação, data de conclusão, status e prioridade de cada registro. Os dados são persistidos em um formato estruturado para facilitar a leitura e análise posterior.
-Também foram acrescidos: O envolvimento e a criação e manipulação de entidades de tarefas e categorias, utilizando técnicas avançadas de estrutura de dados, como a Árvore B+ para implementar índices e relacionamentos.
+# **Projeto de Registro de Dados e Manipulação com Estruturas Avançadas**
 
-Funcionalidades
-Criação de registros: Permite adicionar novos registros ao sistema, definindo os atributos nome, data de criação, status e prioridade. A data de conclusão é inicializada como nula e pode ser atualizada posteriormente.
-Leitura de registros: Carrega os registros existentes do arquivo para a memória, permitindo a visualização e manipulação dos dados.
-Atualização de registros: Permite modificar os atributos de um registro existente, como status ou data de conclusão.
-Remoção de registros: Permite excluir registros indesejados do sistema.
-Persistência de dados: Salva as alterações realizadas nos registros no arquivo externo de forma persistente.
+## **Integrantes**
+- **Vinícius Figueiredo**
+- **Arthur Crossy**
 
-Tecnologias Utilizadas
-Linguagem de programação: Java
+---
 
-Classes criadas no TP3: 
+## **Descrição Geral**
+Esta aplicação tem como objetivo registrar dados em um arquivo externo, armazenando informações como:
+- **Nome**
+- **Data de criação**
+- **Data de conclusão**
+- **Status**
+- **Prioridade**
 
-Classe ArquivoRotulo
+Os dados são persistidos em um formato estruturado para facilitar a leitura e análise posterior.
 
-ela constroi o arquivo de rotulos, e tem seu CRUD de rotulos implementado, juntamente com os métodos para manipular os rotulos.
+Além disso, o projeto incorpora:
+- **Criação e manipulação de entidades de tarefas e categorias.**
+- **Utilização de técnicas avançadas de estrutura de dados**, como a **Árvore B+** para implementar índices e relacionamentos.
 
-Classe ElementoLista
+---
 
-estrutura lista invertida implementada.
+## **Funcionalidades**
+1. **Criação de registros:**
+   - Permite adicionar novos registros ao sistema, definindo os atributos: **nome**, **data de criação**, **status** e **prioridade**.
+   - A **data de conclusão** é inicializada como nula e pode ser atualizada posteriormente.
 
-Classe Rotulo
+2. **Leitura de registros:**
+   - Carrega os registros existentes do arquivo para a memória, permitindo a visualização e manipulação.
 
-entidade criada com seus atributos e métodos de serialização e deserialização, toString e print.
+3. **Atualização de registros:**
+   - Permite modificar os atributos de um registro existente, como **status** ou **data de conclusão**.
 
-Classe TarefaRotulo
+4. **Remoção de registros:**
+   - Exclui registros indesejados do sistema.
 
-Classe que monta o par TarefaRotulo, que permite a busca de tarefas por rótulo.
+5. **Persistência de dados:**
+   - Salva as alterações realizadas nos registros em um arquivo externo de forma persistente.
 
-Classe RotuloTarefa
+---
 
-Classe que monta o par RotuloTarefa, que permite a busca de tarefas por rótulo.
+## **Tecnologias Utilizadas**
+- **Linguagem de Programação:** Java
 
-Classe MenuRotulo
+---
 
-Classe que constroi a interface de rotulos acessada no menu do programa.
+## **Classes Criadas no TP3**
 
-Classe ParNomeIDRotulo
+### **1. Classe `ArquivoRotulo`**
+- Constrói o arquivo de rótulos.
+- Implementa o CRUD de rótulos.
+- Métodos para manipulação de rótulos.
 
-Classe que constroi o Relacionamento entre nome, ID e rotulos
+### **2. Classe `ElementoLista`**
+- Estrutura da **lista invertida** implementada.
 
-Classe ParNomeIDTarefa
+### **3. Classe `Rotulo`**
+- Entidade criada com seus atributos.
+- Métodos de serialização e deserialização.
+- Implementação de `toString` e `print`.
 
-Classe que constroi o Relacionamento entre nome, ID e tarefas
+### **4. Classe `TarefaRotulo`**
+- Monta o par `TarefaRotulo`, permitindo a busca de tarefas por rótulo.
 
+### **5. Classe `RotuloTarefa`**
+- Monta o par `RotuloTarefa`, permitindo a busca de tarefas por rótulo.
 
-As operações mais "difíceis" foram as que envolvem a lista invertida, pois é a novidade desse TP. Para implementar o relacionamento utilizando árvore b+, não tive tanta dificuldade, pois a estrutura já foi introduzida no TP 2. 
+### **6. Classe `MenuRotulo`**
+- Interface de rótulos acessada no menu do programa.
 
-Para concluir, vocês devem, necessariamente, responder ao seguinte checklist (copie as perguntas abaixo para o seu relatório e responda sim/não em frente a elas):
+### **7. Classe `ParNomeIDRotulo`**
+- Relaciona **nome**, **ID** e **rótulos**.
 
-O índice invertido com os termos das tarefas foi criado usando a classe ListaInvertida? Sim
-O CRUD de rótulos foi implementado? Sim
-No arquivo de tarefas, os rótulos são incluídos, alterados e excluídos em uma árvore B+? Sim
-É possível buscar tarefas por palavras usando o índice invertido? Sim
-É possível buscar tarefas por rótulos usando uma árvore B+? Sim
-O trabalho está completo? Sim
-O trabalho é original e não a cópia de um trabalho de um colega? Sim
+### **8. Classe `ParNomeIDTarefa`**
+- Relaciona **nome**, **ID** e **tarefas**.
+
+---
+
+## **Principais Desafios**
+- **Lista invertida:** A implementação dessa estrutura foi uma novidade neste trabalho e exigiu maior atenção.
+- **Árvore B+:** As operações relacionadas ao relacionamento utilizando a Árvore B+ foram menos desafiadoras devido à introdução dessa estrutura no TP2.
+
+---
+
+## **Checklist**
+- O índice invertido com os termos das tarefas foi criado usando a classe `ListaInvertida`? **Sim**
+- O CRUD de rótulos foi implementado? **Sim**
+- No arquivo de tarefas, os rótulos são incluídos, alterados e excluídos em uma Árvore B+? **Sim**
+- É possível buscar tarefas por palavras usando o índice invertido? **Sim**
+- É possível buscar tarefas por rótulos usando uma Árvore B+? **Sim**
+- O trabalho está completo? **Sim**
+- O trabalho é original e não é uma cópia de um trabalho de um colega? **Sim**
+
+---
